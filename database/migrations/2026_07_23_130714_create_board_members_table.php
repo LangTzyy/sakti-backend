@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('board_members', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('role'); // Sekretaris I, Bendahara II, dst
+            $table->string('image')->nullable();
+            $table->integer('order')->default(0); // buat urutan tampil
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('board_members');
+    }
+};
