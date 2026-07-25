@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             BoardMemberSeeder::class,
             DepartmentSeeder::class,
             DemissionerSeeder::class,
+            EventSeeder::class,
+            OrgStatSeeder::class,
         ]);
     }
 }

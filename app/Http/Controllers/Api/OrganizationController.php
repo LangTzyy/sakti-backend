@@ -7,10 +7,14 @@ use App\Http\Resources\LeaderResource;
 use App\Http\Resources\BoardMemberResource;
 use App\Http\Resources\DepartmentResource;
 use App\Http\Resources\DemissionerResource;
+use App\Http\Resources\EventResource;
+use App\Http\Resources\OrgStatResource;
 use App\Models\Leader;
 use App\Models\BoardMember;
 use App\Models\Department;
 use App\Models\Demissioner;
+use App\Models\Event;
+use App\Models\OrgStat;
 
 class OrganizationController extends Controller
 {
@@ -39,5 +43,15 @@ class OrganizationController extends Controller
     public function demissioners()
     {
         return DemissionerResource::collection(Demissioner::all());
+    }
+
+    public function events()
+    {
+        return EventResource::collection(Event::orderBy('start_date')->get());
+    }
+
+    public function stats()
+    {
+        return OrgStatResource::collection(OrgStat::orderBy('order')->get());
     }
 }

@@ -13,3 +13,5 @@ Route::get('/board', [OrganizationController::class, 'board']);
 Route::get('/departments', [OrganizationController::class, 'departments']);
 Route::get('/departments/{slug}', [OrganizationController::class, 'department']);
 Route::get('/demissioners', [OrganizationController::class, 'demissioners']);
+Route::get('/events', [OrganizationController::class, 'events']);
+Route::get('/stats', [OrganizationController::class, 'stats']);
