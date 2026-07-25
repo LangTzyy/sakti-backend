@@ -19,7 +19,9 @@ class DemissionerForm
                 TextInput::make('period')
                     ->default(null),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->disk('public')
+                    ->directory('demissioners'),
             ]);
     }
 }

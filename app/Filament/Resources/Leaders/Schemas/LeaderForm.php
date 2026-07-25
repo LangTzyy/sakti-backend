@@ -32,6 +32,7 @@ class LeaderForm
                 Forms\Components\FileUpload::make('image')
                     ->label('Foto')
                     ->image()
+                    ->disk('public')
                     ->directory('leaders')
                     ->nullable(),
 

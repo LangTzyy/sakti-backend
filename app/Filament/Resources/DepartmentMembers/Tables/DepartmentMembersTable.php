@@ -17,7 +17,7 @@ class DepartmentMembersTable
         return $table
             ->columns([
                 ImageColumn::make('image')
-                    ->label('Foto'),
+                    ->disk('public'),
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),

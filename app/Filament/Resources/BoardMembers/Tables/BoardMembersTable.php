@@ -19,7 +19,8 @@ class BoardMembersTable
                     ->searchable(),
                 TextColumn::make('role')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 TextColumn::make('order')
                     ->numeric()
                     ->sortable(),

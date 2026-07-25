@@ -21,7 +21,8 @@ class DemissionersTable
                     ->searchable(),
                 TextColumn::make('period')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

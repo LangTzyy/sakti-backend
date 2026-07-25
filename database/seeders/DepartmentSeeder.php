@@ -95,7 +95,7 @@ class DepartmentSeeder extends Seeder
                 $department->members()->create([
                     'name' => $member['name'],
                     'role' => $member['role'],
-                    'image' => '/placeholder-user.jpg',
+                    'image' => 'null',
                 ]);
             }
         }

@@ -17,7 +17,9 @@ class BoardMemberForm
                 TextInput::make('role')
                     ->required(),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->disk('public')
+                    ->directory('board-members'),
                 TextInput::make('order')
                     ->required()
                     ->numeric()

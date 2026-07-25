@@ -12,7 +12,7 @@ class LeaderSeeder extends Seeder
         Leader::create([
             'role' => 'Ketua Umum',
             'name' => 'Gilang Dwi Hermawan',
-            'image' => '/placeholder-user.jpg',
+            'image' => null,
             'visi' => 'Mewujudkan organisasi terbuka dan profesional sebagai ruang kolaborasi mahasiswa TI dalam Pengembangan akademik dan minat bakat',
             'misi' => [
                 'Menghadirkan suasana organisasi yang terbuka dan nyaman bagi semua anggota untuk tumbuh bersama',
@@ -25,13 +25,13 @@ class LeaderSeeder extends Seeder
         Leader::create([
             'role' => 'Wakil Ketua',
             'name' => 'Fika Aulia',
-            'image' => '/placeholder-user.jpg',
+            'image' => null,
         ]);
 
         Leader::create([
             'role' => 'Pembina Organisasi',
             'name' => 'Dr. Suastika Yulia Riska, S.Kom., M.Kom.',
-            'image' => '/placeholder-user.jpg',
+            'image' => null,
         ]);
     }
 }

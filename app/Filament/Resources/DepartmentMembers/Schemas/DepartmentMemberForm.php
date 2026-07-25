@@ -23,7 +23,9 @@ class DepartmentMemberForm
                 TextInput::make('role')
                     ->required(),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->disk('public')
+                    ->directory('department-members'),
             ]);
     }
 }
