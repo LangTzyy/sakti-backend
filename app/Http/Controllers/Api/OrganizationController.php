@@ -9,12 +9,16 @@ use App\Http\Resources\DepartmentResource;
 use App\Http\Resources\DemissionerResource;
 use App\Http\Resources\EventResource;
 use App\Http\Resources\OrgStatResource;
+use App\Http\Resources\AchievementResource;
+use App\Http\Resources\GalleryPhotoResource;
 use App\Models\Leader;
 use App\Models\BoardMember;
 use App\Models\Department;
 use App\Models\Demissioner;
 use App\Models\Event;
 use App\Models\OrgStat;
+use App\Models\Achievement;
+use App\Models\GalleryPhoto;
 
 class OrganizationController extends Controller
 {
@@ -53,5 +57,15 @@ class OrganizationController extends Controller
     public function stats()
     {
         return OrgStatResource::collection(OrgStat::orderBy('order')->get());
+    }
+
+    public function achievements()
+    {
+        return AchievementResource::collection(Achievement::orderBy('order')->get());
+    }
+
+    public function gallery()
+    {
+        return GalleryPhotoResource::collection(GalleryPhoto::orderBy('order')->get());
     }
 }

@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             DemissionerSeeder::class,
             EventSeeder::class,
             OrgStatSeeder::class,
+            AchievementSeeder::class,
         ]);
     }
 }
