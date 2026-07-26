@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             EventSeeder::class,
             OrgStatSeeder::class,
             AchievementSeeder::class,
+            OrgContactSeeder::class,
         ]);
     }
 }

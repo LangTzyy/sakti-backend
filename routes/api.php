@@ -17,3 +17,4 @@ Route::get('/events', [OrganizationController::class, 'events']);
 Route::get('/stats', [OrganizationController::class, 'stats']);
 Route::get('/achievements', [OrganizationController::class, 'achievements']);
 Route::get('/gallery', [OrganizationController::class, 'gallery']);
+Route::get('/contact-info', [OrganizationController::class, 'contactInfo']);

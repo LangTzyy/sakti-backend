@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Departments\Schemas;
 
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
@@ -22,15 +23,36 @@ class DepartmentForm
                 Textarea::make('jobdesk')
                     ->default(null)
                     ->columnSpanFull(),
-                Textarea::make('programs')
-                    ->default(null)
-                    ->columnSpanFull(),
-                Textarea::make('skills')
-                    ->default(null)
-                    ->columnSpanFull(),
-                Textarea::make('projects')
-                    ->default(null)
-                    ->columnSpanFull(),
+
+                Repeater::make('programs')
+                    ->label('Program Kerja')
+                    ->simple(
+                        TextInput::make('item')
+                            ->label('Program')
+                            ->required()
+                    )
+                    ->addActionLabel('Tambah program kerja')
+                    ->nullable(),
+
+                Repeater::make('skills')
+                    ->label('Skill yang Dikembangkan')
+                    ->simple(
+                        TextInput::make('item')
+                            ->label('Skill')
+                            ->required()
+                    )
+                    ->addActionLabel('Tambah skill')
+                    ->nullable(),
+
+                Repeater::make('projects')
+                    ->label('Project')
+                    ->simple(
+                        TextInput::make('item')
+                            ->label('Project')
+                            ->required()
+                    )
+                    ->addActionLabel('Tambah project')
+                    ->nullable(),
             ]);
     }
 }

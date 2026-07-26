@@ -11,6 +11,7 @@ use App\Http\Resources\EventResource;
 use App\Http\Resources\OrgStatResource;
 use App\Http\Resources\AchievementResource;
 use App\Http\Resources\GalleryPhotoResource;
+use App\Http\Resources\OrgContactResource;
 use App\Models\Leader;
 use App\Models\BoardMember;
 use App\Models\Department;
@@ -19,6 +20,7 @@ use App\Models\Event;
 use App\Models\OrgStat;
 use App\Models\Achievement;
 use App\Models\GalleryPhoto;
+use App\Models\OrgContact;
 
 class OrganizationController extends Controller
 {
@@ -67,5 +69,10 @@ class OrganizationController extends Controller
     public function gallery()
     {
         return GalleryPhotoResource::collection(GalleryPhoto::orderBy('order')->get());
+    }
+
+    public function contactInfo()
+    {
+        return new OrgContactResource(OrgContact::firstOrFail());
     }
 }
