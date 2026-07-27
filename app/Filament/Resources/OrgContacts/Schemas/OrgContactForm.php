@@ -37,8 +37,8 @@ class OrgContactForm
                     ->url()
                     ->nullable(),
 
-                TextInput::make('linkedin_url')
-                    ->label('Link LinkedIn')
+                TextInput::make('youtube_url')
+                    ->label('Link YouTube')
                     ->url()
                     ->nullable(),
 

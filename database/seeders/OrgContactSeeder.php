@@ -15,7 +15,7 @@ class OrgContactSeeder extends Seeder
             'office_hours' => 'Senin - Jumat, 09.00 - 16.00 WIB',
             'maps_query' => '-7.937973,112.6266227',
             'instagram_url' => null,
-            'linkedin_url' => null,
+            'youtube_url' => null,
             'github_url' => null,
         ]);
     }

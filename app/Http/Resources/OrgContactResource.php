@@ -15,7 +15,7 @@ class OrgContactResource extends JsonResource
             'office_hours' => $this->office_hours,
             'maps_query' => $this->maps_query,
             'instagram_url' => $this->instagram_url,
-            'linkedin_url' => $this->linkedin_url,
+            'youtube_url' => $this->youtube_url,
             'github_url' => $this->github_url,
         ];
     }
